@@ -1,0 +1,44 @@
+@model BookingSystem.Models.Booking
+
+@{
+    ViewData["Title"] = "Amend Booking";
+}
+
+<h1>Amend Booking</h1>
+
+<form asp-action="UpdateBooking" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <div class="form-group">
+        <label for="Facility">Facility</label>
+        <input type="text" id="Facility" name="Facility" class="form-control" value="@Model.Facility" required />
+    </div>
+    <div class="form-group">
+        <label for="Block">Block</label>
+        <input type="text" id="Block" name="Block" class="form-control" value="@Model.Block" required />
+    </div>
+    <div class="form-group">
+        <label for="Floor">Floor</label>
+        <input type="number" id="Floor" name="Floor" class="form-control" value="@Model.Floor" required />
+    </div>
+    <div class="form-group">
+        <label for="StartTime">Start Time</label>
+        <input type="datetime-local" id="StartTime" name="StartTime" class="form-control" value="@Model.StartTime.ToString("yyyy-MM-ddTHH:mm")" required />
+    </div>
+    <div class="form-group">
+        <label for="EndTime">End Time</label>
+        <input type="datetime-local" id="EndTime" name="EndTime" class="form-control" value="@Model.EndTime.ToString("yyyy-MM-ddTHH:mm")" required />
+    </div>
+    <div class="form-group">
+        <label for="BookedBy">Booked By</label>
+        <input type="text" id="BookedBy" name="BookedBy" class="form-control" value="@Model.BookedBy" required />
+    </div>
+    <div class="form-group">
+        <label for="Contact">Contact</label>
+        <input type="text" id="Contact" name="Contact" class="form-control" value="@Model.Contact" required />
+    </div>
+    <div class="form-group">
+        <label for="AdditionalInfo">Additional Info</label>
+        <textarea id="AdditionalInfo" name="AdditionalInfo" class="form-control">@Model.AdditionalInfo</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

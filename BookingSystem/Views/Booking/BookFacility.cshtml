@@ -1,0 +1,48 @@
+@model IEnumerable<BookingSystem.Models.Facility>
+
+@{
+    ViewData["Title"] = "Book Facility";
+}
+
+<h1>Book Facility</h1>
+
+<form asp-action="CreateBooking" method="post">
+    <div class="form-group">
+        <label for="Facility">Facility</label>
+        <select id="Facility" name="Facility" class="form-control" required>
+            @foreach (var facility in Model)
+            {
+                <option value="@facility.Name">@facility.Name - @facility.Block Block, Floor @facility.Floor</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Block">Block</label>
+        <input type="text" id="Block" name="Block" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Floor">Floor</label>
+        <input type="number" id="Floor" name="Floor" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="StartTime">Start Time</label>
+        <input type="datetime-local" id="StartTime" name="StartTime" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="EndTime">End Time</label>
+        <input type="datetime-local" id="EndTime" name="EndTime" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="BookedBy">Booked By</label>
+        <input type="text" id="BookedBy" name="BookedBy" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Contact">Contact</label>
+        <input type="text" id="Contact" name="Contact" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="AdditionalInfo">Additional Info</label>
+        <textarea id="AdditionalInfo" name="AdditionalInfo" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/nathan/Documents/Freelance/booking-system-website/BookingSystem
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/nathan/Documents/Freelance/booking-system-website/BookingSystem/Views/Booking/AmendBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9BbWVuZEJvb2tpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documents/Freelance/booking-system-website/BookingSystem/Views/Booking/BookFacility.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9Cb29rRmFjaWxpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nathan/Documents/Freelance/booking-system-website/BookingSystem/Views/Booking/ViewBookings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9WaWV3Qm9va2luZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/nathan/Documents/Freelance/booking-system-website/BookingSystem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

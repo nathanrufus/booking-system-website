@@ -1,0 +1,41 @@
+@model IEnumerable<BookingSystem.Models.Booking>
+
+@{
+    ViewData["Title"] = "View Bookings";
+}
+
+<h1>View Bookings</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Facility</th>
+            <th>Block</th>
+            <th>Floor</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Booked By</th>
+            <th>Contact</th>
+            <th>Additional Info</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.Facility</td>
+                <td>@booking.Block</td>
+                <td>@booking.Floor</td>
+                <td>@booking.StartTime</td>
+                <td>@booking.EndTime</td>
+                <td>@booking.BookedBy</td>
+                <td>@booking.Contact</td>
+                <td>@booking.AdditionalInfo</td>
+                <td>
+                    <a asp-action="AmendBooking" asp-route-id="@booking.Id" class="btn btn-warning">Amend</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
